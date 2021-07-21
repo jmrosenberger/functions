@@ -165,31 +165,25 @@ console.log(sentenceArray)
  //--------------  SEVENTH EXERCISE ---------------//
 //Practice: You Can Tune a Piano, But You Can't...//
 
+ 
 
 
+const isSvenGoingHungry = (num) => {   
+    
+    if (Math.random() * num < 1) {
+        
+        console.log("Sven came up empty-handed.  :(")           
+              
+    } else {
+        
+        console.log("Sven hooked a tuna!  :)")                          
 
-const isSvenGoingHungry = () => {
-
-    const randomNumber = Math.random() * 2
-
-        if (randomNumber >= 1) {
-
-            return true
-
-        } else {
-
-            return false
     }
+   
 }
+ 
 
-if (isSvenGoingHungry()) {
-
-    console.log("Sven hooked a tuna!  :)")                           //---COULD NOT FIGURE OUT THIS NEXT STEP----------//
-
-} else {                                                           //---Instead of hard-coding the number by which---//
-
-    console.log("Sven came up empty-handed.  :(")               //---you multiple random(), see if you can pass---//
-}                                                               //---that number in as an argument to the function//
+isSvenGoingHungry(2)
 
 
 
@@ -225,6 +219,77 @@ console.log(takeOutBag)
 
 
 
+const twice = number => number * 2
+
+twiceTwo = twice(2)
+console.log(twiceTwo)  // 4
+
+twiceSix = twice(6)
+console.log(twiceSix)  // 12
+
+twiceThirteen = twice(13)
+console.log(twiceThirteen)  // 26
+
+
+
+const timesFive = number => number * 5
+
+console.log(timesFive(2))
+console.log(timesFive(5))
+
+
+
+const square = number => number * number
+
+console.log(square(4))
+console.log(square(13))
+
+
+const bigify = (number, operationFunction) => {
+    const result = operationFunction(number)
+    return result
+}
+
+
+const number = 7
+
+const by2 = bigify(number, twice)
+const by5 = bigify(number, timesFive)
+const byItself = bigify(number, square)
+
+const trio = number => number * number * number
+
+const thrice = bigify(number, trio)
+
+
+//-------------------------------------
+
+
+const person = {
+    firstName: "Donald",
+    lastName: "McLelland"
+}
+
+
+const trash = person => `${person.firstName} ${person.lastName} took out the trash`
+
+const dishes = person => `${person.firstName} ${person.lastName} washed the dishes`
+
+const laundry = person => `${person.firstName} ${person.lastName} did the laundry`
+
+const mowed = person => `${person.firstName} ${person.lastName} mowed the lawn`
+
+const dusted = person => `${person.firstName} ${person.lastName} dusted the dining room`
+
+const swept = person => `${person.firstName} ${person.lastName} swept the kitchen floor`
+
+console.log(trash(person))
+
+// function dayPlanner(chore, person, day) {
+//     return person + trash + "on thursday"
+// }
+
+//  console.log(dayPlanner())
 
 
 
